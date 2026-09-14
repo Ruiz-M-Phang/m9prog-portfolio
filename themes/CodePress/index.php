@@ -1,9 +1,24 @@
- <?php
+<?php
 
-get_header();
+get_header(); 
 
-while ($a <= 10) {
-    # code...
-}
+while ( have_posts() ) :
+    the_post(); 
+
+    $url = get_permalink();
+?>
+
+
+<main>
+    <a href="<?= $url ?>">
+        <h1><?= get_the_title() ?></h1>
+    </a>
+    <p><?= the_content() ?></p>
+</main>
+
+<?php
+endwhile;
 
 get_footer();
+
+?>
