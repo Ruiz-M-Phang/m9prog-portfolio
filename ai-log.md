@@ -1,4 +1,48 @@
 
+
+# Begrijp ik al
+
+## footer.php
+
+```php
+<p>
+    &copy; <?php echo esc_html(wp_date('Y')); ?>
+    <?php bloginfo('name'); ?>.
+</p>
+```
+
+# Begrijp ik niet
+
+## functions.php
+
+```php
+add_theme_support('title-tag');
+
+register_nav_menus([
+    'primary' => __('Hoofdmenu', 'CodePress'),
+]);
+
+wp_enqueue_style(
+    'CodePress',
+    get_stylesheet_uri(),
+    [],
+    wp_get_theme()->get('Version')
+);
+
+add_action('wp_enqueue_scripts', 'stage_portfolio_assets');
+```
+
+## header.php
+
+```php
+wp_nav_menu([
+    'theme_location' => 'primary',
+    'fallback_cb'    => false,
+]);
+```
+
+# Moet ik later veranderen
+
 ## functions.php
 
 ### ChatGPT's code
