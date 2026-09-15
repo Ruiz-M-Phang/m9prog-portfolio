@@ -71,6 +71,37 @@ function stage_portfolio_assets() { // functie die verwijst waar de style.css is
 }
 ```
 
+## header.php
+
+### ChatGPT's code
+
+```php
+<nav class="site-navigation" aria-label="<?php esc_attr_e('Hoofdnavigatie', 'CodePress'); ?>">
+    <?php
+    wp_nav_menu([
+        'theme_location' => 'primary',
+        'fallback_cb'    => false,
+    ]);
+    ?>
+</nav>
+```
+
+### Ruiz M. Phang's veranderening
+
+```php
+<nav class="site-navigation" aria-label="<?php esc_attr_e('Hoofdnavigatie', 'CodePress'); ?>">
+    <?php
+    wp_nav_menu([
+        'theme_location' => 'primary',
+        'fallback_cb'    => false,
+    ]);
+    ?>
+    <a href="<?php echo esc_url(get_permalink(get_page_by_path('over-mij'))); ?>">over mij</a>
+    <a href="<?php echo esc_url(get_permalink(get_page_by_path('projecten'))); ?>">projecten</a>
+    <a href="<?php echo esc_url(get_permalink(get_page_by_path('contact'))); ?>">contact</a>
+</nav>
+```
+
 ## front-page.php
 
 ### ChatGPT's code
@@ -92,3 +123,9 @@ function stage_portfolio_assets() { // functie die verwijst waar de style.css is
     inzetten en verder ontwikkelen.
 </p>
 ```
+
+# testrapport
+
+## Wordpress thema structuur maken via ChatGPT
+
+ - Hier heb ik getest of de code van ChatGPT werkt, maar ik heb ook veel vragen gesteld of het hun eigen code kon beschrijven in het geval als ik niet snap wat er stond. Echter heb ik gemerkt dat de code meer sjabloon was dan een echte structuur met sensitive informatie en gevulde `<a>` tags. Ook zag ik dat er een navigatie miste die je naar de subpagina's brengt.
