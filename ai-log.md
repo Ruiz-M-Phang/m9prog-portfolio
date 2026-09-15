@@ -128,4 +128,10 @@ function stage_portfolio_assets() { // functie die verwijst waar de style.css is
 
 ## Wordpress thema structuur maken via ChatGPT
 
- - Hier heb ik getest of de code van ChatGPT werkt, maar ik heb ook veel vragen gesteld of het hun eigen code kon beschrijven in het geval als ik niet snap wat er stond. Echter heb ik gemerkt dat de code meer sjabloon was dan een echte structuur met sensitive informatie en gevulde `<a>` tags. Ook zag ik dat er een navigatie miste die je naar de subpagina's brengt.
+```
+ Hier heb ik getest of de code van ChatGPT werkt, maar ik heb ook veel vragen gesteld of het hun eigen code kon beschrijven in het geval als ik niet snap wat er stond. Echter heb ik gemerkt dat de code meer sjabloon was dan een echte structuur met sensitive informatie en gevulde `<a>` tags. Ook zag ik dat er een navigatie miste die je naar de subpagina's brengt.
+```
+
+ ## Wat doet add_theme_support('post-thumbnails');
+
+  - Je geeft aan dat jouw thema uitgelichte afbeeldingen support.
